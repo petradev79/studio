@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 55%;
+  }
+
+  @include respond(phone) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-family: 'Futura', sans-serif;
+  font-weight: normal;
+  background: $color-bg;
+  color: $color-text;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

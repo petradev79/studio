@@ -1,0 +1,77 @@
+.users {
+  position: relative;
+  margin-top: 5.6rem;
+  margin-left: 3rem;
+
+  @include respond(tab-land) {
+    margin-left: 2.5rem;
+  }
+
+  @include respond(phone) {
+    margin-left: 3.4rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4.2rem;
+  }
+
+  &__swich {
+    margin-right: 5.8rem;
+    display: flex;
+
+    &--list {
+      margin-left: 2.5rem;
+    }
+
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 27rem);
+
+    @include respond(big) {
+      width: calc(100% - 10rem);
+    }
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+  }
+
+  .list__labels {
+    display: none;
+  }
+
+  .users-list {
+    width: 100%;
+
+    .list__labels {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 3rem;
+      margin-left: calc(10% + 5rem);
+      padding: 2.2rem 2.5rem;
+
+      @include respond(big) {
+        margin-left: calc(10%);
+      }
+
+      h3 {
+        width: 16rem;
+      }
+    }
+  }
+}

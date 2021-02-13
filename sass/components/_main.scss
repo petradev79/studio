@@ -1,0 +1,36 @@
+.main {
+  position: relative;
+  margin-left: 25.5rem;
+  padding-bottom: 4.5rem;
+  width: calc(100% - 25.5rem);
+  background: $color-white;
+
+  @include respond(tab-port) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  &__img {
+    position: fixed;
+    right: calc((100% - 144rem) / 2);
+    top: 34.4rem;
+
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    @include respond(tab-port) {
+      padding-top: 10rem;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+}

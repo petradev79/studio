@@ -1,0 +1,79 @@
+.sidebar {
+  background: $color-primary;
+  width: 25.5rem;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  transition: all 0.3s ease-out;
+
+  @include respond(tab-port) {
+    width: 100%;
+    height: auto;
+  }
+
+  &__small {
+    margin-top: 3.8rem;
+    margin-bottom: 6.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-port) {
+      margin: 3rem 3.4rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: $letter-spacing-lg;
+    margin-left: 7.6rem;
+
+    @include respond(tab-port) {
+      margin-left: 0;
+    }
+  }
+
+  &__menu {
+    &--top {
+      margin-bottom: 5.625rem;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__item {
+    padding: 1.8rem 0;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease-out;
+    font-weight: normal;
+
+    img {
+      margin-left: 3.2rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    letter-spacing: $letter-spacing-sm;
+    margin: 0 2.4rem;
+  }
+
+  .active {
+    background-color: rgba($color-white, 0.2);
+    border-left: 2px solid $color-white;
+    font-weight: bold;
+  }
+}
+
+.show {
+  height: 100vh;
+
+  .sidebar__menu {
+    display: block;
+  }
+}

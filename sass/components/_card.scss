@@ -1,0 +1,85 @@
+.card {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: 2.8rem 2.5rem;
+  width: 25.8rem;
+  height: 33rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  z-index: 10;
+
+  @include respond(tab-land) {
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @include respond(tab-port) {
+    width: calc(100% / 3 - 2.5rem);
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    margin-right: 3.4rem;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    height: 20px;
+  }
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  &__label {
+    margin-bottom: 1rem;
+  }
+
+  &__data {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $color-text;
+  }
+}
+
+.list {
+  padding: 2.7rem 1.8rem;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  margin-right: 3rem;
+  margin-bottom: 0;
+  z-index: 10;
+
+  .card__title {
+    margin-bottom: 0;
+    margin-right: 5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    @include respond(big) {
+      margin-right: 2rem;
+    }
+  }
+
+  .card__group {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  .card__label {
+    display: none;
+  }
+
+  .card__data {
+    font-size: 1.6rem;
+    font-weight: normal;
+    width: 16rem;
+  }
+}
